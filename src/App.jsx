@@ -1,12 +1,13 @@
+import NavBar from "./components/NavBar";
+import 'bootstrap/dist/css/bootstrap.min.css';
+import Cards from "./components/Cards";
 
-
-function App() {
+export default function App() {
 
   return (
-      <div>
-       <p>jfghg</p>
+      <div className="App">
+       <NavBar/>
+       <Cards/>
     </div>
   )
-}
-
-export default App
+};
