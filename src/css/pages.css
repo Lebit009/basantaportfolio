@@ -14,79 +14,63 @@
     flex-direction: row;
     padding: 50px;
   }
-/* App.css */
 
-/* Basic styling for the section */
+/* Section Container */
 .section {
   display: flex;
   justify-content: center;
-  gap: 20px;  /* Space between buttons */
+  gap: 20px;
+  flex-wrap: wrap; /* Ensures responsiveness */
+  padding: 20px;
 }
 
-/* Style for each button */
-.section button {
-  background-color: transparent;  /* Transparent background */
-  color: #000000;  /* Text color (dark gray) */
-  padding: 12px 30px;  /* Padding around text */
-  font-size: 16px;  /* Font size */
-  border: none;  /* Remove default border */
-  border-radius: 8px;  /* Rounded corners */
-  cursor: pointer;  /* Pointer cursor on hover */
-  position: relative;  /* Position relative to create the underline effect */
-  transition: color 0.3s ease;  /* Smooth transition for color change */
+/* Navigation Buttons */
+.nav-btn {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  text-decoration: none; 
+  /* background: linear-gradient(135deg, #2646e4, #1a2b8f);  */
+  color: #000000; 
+  font-weight: bold;
+  font-size: 16px;
+  padding: 12px 20px;
+  transition: 0.3s ease-in-out;
+  /* box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); */
 }
 
-/* Add beautiful underline effect with before/after */
-.section button::before,
-.section button::after {
-  content: '';  /* No content, just the underline */
-  position: absolute;
-  bottom: 0;
-  width: 0;
-  height: 2px;
-  background-color: #2646e4;  /* Underline color */
-  transition: width 0.3s ease;  /* Smooth transition for underline width */
+/* Button Icon */
+.btn-icon {
+  width: 30px;
+  height: 30px;
 }
 
-.section button::before {
-  left: 50%;  /* Start from the middle of the button */
-  transform: translateX(-50%);  /* Center the underline */
+/* Hover Effects */
+.nav-btn:hover {
+  /* background: linear-gradient(135deg, #1a2b8f, #2646e4); Reverse gradient */
+  transform: translateY(-3px); /* Slight lift */
+  box-shadow: 0 3px rgb(0, 76, 218);
+}
+/* Active State */
+.nav-btn.active {
+  transform: translateY(-3px); /* Slight lift */
+  box-shadow: 0 3px rgb(0, 76, 218);
+  color: rgb(0, 76, 218);
 }
 
-.section button::after {
-  right: 50%;  /* Start from the middle of the button */
-  transform: translateX(50%);  /* Center the underline */
+.nav-btn.active .btn-icon {
+  transform: scale(1.2); /* Slightly enlarge active icon */
 }
 
-/* Hover effect: Change text color and expand the underline */
-.section button:hover {
-  color: #2646e4;  /* Change text color to match the underline */
-}
-
-.section button:hover::before,
-.section button:hover::after {
-  width: 100%;  /* Make the underline full width on hover */
-}
-
-/* Optional: Mobile responsiveness */
+/* Mobile Responsive */
 @media (max-width: 768px) {
   .section {
-    flex-direction: column;  /* Stack the buttons vertically on smaller screens */
-    align-items: center;  /* Center the buttons */
+    flex-direction: column;
+    align-items: center;
   }
 
-  .section button {
-    width: 80%;  /* Make buttons wider on mobile */
-    margin-bottom: 10px;  /* Add space between buttons */
+  .nav-btn {
+    width: 100%;
+    justify-content: center;
   }
 }
-
-  
-  h1 {
-    font-size: 3rem;
-  }
-  
-  h2 {
-    font-size: 2.5rem;
-  }
-  
