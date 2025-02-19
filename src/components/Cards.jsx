@@ -8,6 +8,7 @@ export default function Cards() {
   const handleDecrease = () => setQuantity(quantity > 0 ? quantity - 1 : 0);
 
   return (
+    <div className="card-container">
     <div className="card">
       <span className="card-image">
         <img src={"https://img.kwcdn.com/product/open/64fc285579a74e32b48ddca3456e2db1-goods.jpeg?imageView2/2/w/1300/q/80/format/webp"} alt="product" />
@@ -29,6 +30,7 @@ export default function Cards() {
         <button>Add to Cart</button>
       </div>
       </div>
+    </div>
     </div>
   );
 }

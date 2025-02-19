@@ -1,0 +1,60 @@
+.navbar {
+  background-color: none !important;
+  box-shadow: none !important;
+  transition: 0.5s all ease-out;
+}
+.nav{
+    position: relative;
+}
+
+.navbar a {
+  color: rgb(0, 0, 0) !important;
+  font-size: medium !important;
+}
+/* App.css */
+.nav-link:hover i {
+    transform: scale(1.2); /* Slightly increase size on hover */
+    transition: transform 0.3s ease;
+    color: #ff6347; /* Change color on hover */
+  }
+  #animated-text {
+    font-size: 48px;
+    font-family: 'Arial', sans-serif;
+    font-weight: bold;
+    display: inline-block;
+    opacity: 0;
+    animation: slideIn 2s forwards;
+  }
+  
+  @keyframes slideIn {
+    0% {
+      opacity: 0;
+      transform: translateY(0px); 
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(5); 
+    }
+  }
+.imgg{
+    margin: auto;
+    height: 40px;
+}
+.navbar a:hover {
+  color: rgb(0, 195, 230) !important;
+}
+.navbar .dropdown-menu {
+  position: absolute !important;
+  margin-top: 0;
+  background: rgb(123, 123, 123);
+}
+
+@media screen and (max-width: 990px) {
+  .navbar {
+    background-color: rgba(0, 0, 0, 0.9) !important;
+    transition: all 0.5s;
+  }
+}
+.intro-description{
+    padding: 2%;
+}

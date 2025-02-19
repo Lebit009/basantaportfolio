@@ -1,0 +1,92 @@
+/* App.css */
+.content {
+    height: 500px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: rgb(0, 0, 0);
+    font-size: 2rem;
+  }
+
+  .flex-parallax{
+    display: flex;
+    flex-direction: row;
+    padding: 50px;
+  }
+/* App.css */
+
+/* Basic styling for the section */
+.section {
+  display: flex;
+  justify-content: center;
+  gap: 20px;  /* Space between buttons */
+}
+
+/* Style for each button */
+.section button {
+  background-color: transparent;  /* Transparent background */
+  color: #000000;  /* Text color (dark gray) */
+  padding: 12px 30px;  /* Padding around text */
+  font-size: 16px;  /* Font size */
+  border: none;  /* Remove default border */
+  border-radius: 8px;  /* Rounded corners */
+  cursor: pointer;  /* Pointer cursor on hover */
+  position: relative;  /* Position relative to create the underline effect */
+  transition: color 0.3s ease;  /* Smooth transition for color change */
+}
+
+/* Add beautiful underline effect with before/after */
+.section button::before,
+.section button::after {
+  content: '';  /* No content, just the underline */
+  position: absolute;
+  bottom: 0;
+  width: 0;
+  height: 2px;
+  background-color: #2646e4;  /* Underline color */
+  transition: width 0.3s ease;  /* Smooth transition for underline width */
+}
+
+.section button::before {
+  left: 50%;  /* Start from the middle of the button */
+  transform: translateX(-50%);  /* Center the underline */
+}
+
+.section button::after {
+  right: 50%;  /* Start from the middle of the button */
+  transform: translateX(50%);  /* Center the underline */
+}
+
+/* Hover effect: Change text color and expand the underline */
+.section button:hover {
+  color: #2646e4;  /* Change text color to match the underline */
+}
+
+.section button:hover::before,
+.section button:hover::after {
+  width: 100%;  /* Make the underline full width on hover */
+}
+
+/* Optional: Mobile responsiveness */
+@media (max-width: 768px) {
+  .section {
+    flex-direction: column;  /* Stack the buttons vertically on smaller screens */
+    align-items: center;  /* Center the buttons */
+  }
+
+  .section button {
+    width: 80%;  /* Make buttons wider on mobile */
+    margin-bottom: 10px;  /* Add space between buttons */
+  }
+}
+
+  
+  h1 {
+    font-size: 3rem;
+  }
+  
+  h2 {
+    font-size: 2.5rem;
+  }
+  
