@@ -9,40 +9,32 @@ import skill from "../assets/img/skill.png";
 import practice from "../assets/img/practice.png";
 import { useState } from "react";
 
-export default function Pages() {
-  const location = useLocation(); // Get current route
-  const currentPath = location.pathname; // Extract current path
 
-  return (
-    <div className="section">
-      <Link
-        to="/education"
-        className={`nav-btn ${currentPath === "/education" ? "active" : ""}`}
-      >
-        <img src={edu} alt="Education Icon" className="btn-icon" />
-        <span>Education</span>
-      </Link>
-      <Link
-        to="/experience"
-        className={`nav-btn ${currentPath === "/experience" ? "active" : ""}`}
-      >
-        <img src={exp} alt="Experience Icon" className="btn-icon" />
-        <span>Experience</span>
-      </Link>
-      <Link
-        to="/skills"
-        className={`nav-btn ${currentPath === "/skills" ? "active" : ""}`}
-      >
-        <img src={skill} alt="Skills Icon" className="btn-icon" />
-        <span>Skills</span>
-      </Link>
-      <Link
-        to="/practice"
-        className={`nav-btn ${currentPath === "/practice" ? "active" : ""}`}
-      >
-        <img src={practice} alt="Practice Icon" className="btn-icon" />
-        <span>My Practice</span>
-      </Link>
+
+export default function Pages() {
+
+    const location = useLocation(); // Get current route
+    const currentPath = location.pathname; // Extract current path
+  
+    return (
+      <div className="section">
+        <Link to="/education" className={`nav-btn ${currentPath === "/education" ? "active" : ""}`}>
+          <img src={edu} alt="Education Icon" className="btn-icon" />
+          <span>Education</span>
+        </Link>
+        <Link to="/experience" className={`nav-btn ${currentPath === "/experience" ? "active" : ""}`}>
+          <img src={exp} alt="Experience Icon" className="btn-icon" />
+          <span>Experience</span>
+        </Link>
+        <Link to="/skills" className={`nav-btn ${currentPath === "/skills" ? "active" : ""}`}>
+          <img src={skill} alt="Skills Icon" className="btn-icon" />
+          <span>Skills</span>
+        </Link>
+        <Link to="/practice" className={`nav-btn ${currentPath === "/practice" ? "active" : ""}`}>
+          <img src={practice} alt="Practice Icon" className="btn-icon" />
+          <span>My Practice</span>
+        </Link>
+
 
       {/* Parallax Section */}
       {/* <Parallax

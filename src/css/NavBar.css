@@ -1,14 +1,19 @@
-.navbar {
-  background-color: none !important;
-  box-shadow: none !important;
-  transition: 0.5s all ease-out;
+.navbar {position: fixed;
+width: 100%;
+top: 0;
+left: 0;
+transition: 0.5s all ease-out;
+background-color: transparent;
+box-shadow: none;
 }
-.nav{
-    position: relative;
+
+.navbar.scrolled {
+background-color: rgb(105, 47, 19) !important;
+box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3) !important;
 }
 
 .navbar a {
-  color: rgb(0, 0, 0) !important;
+  color: rgb(255, 255, 255) !important;
   font-size: medium !important;
 }
 /* App.css */
@@ -17,7 +22,7 @@
     transition: transform 0.3s ease;
     color: #ff6347; /* Change color on hover */
   }
-  #animated-text {
+  /* #animated-text {
     font-size: 48px;
     font-family: 'Arial', sans-serif;
     font-weight: bold;
@@ -35,7 +40,7 @@
       opacity: 1;
       transform: translateY(5); 
     }
-  }
+  } */
 .imgg{
     margin: auto;
     height: 40px;
@@ -46,12 +51,14 @@
 .navbar .dropdown-menu {
   position: absolute !important;
   margin-top: 0;
-  background: rgb(123, 123, 123);
+
+  background: rgb(0, 0, 0);
 }
 
 @media screen and (max-width: 990px) {
   .navbar {
-    background-color: rgba(0, 0, 0, 0.9) !important;
+    outline: none;
+    background-color: rgba(255, 255, 255, 0.9) !important;
     transition: all 0.5s;
   }
 }

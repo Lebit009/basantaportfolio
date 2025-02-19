@@ -1,5 +1,5 @@
 import "../css/Intro.css";
-import hisoka from "../assets/hisoka.png";
+import hisoka from "../assets/img/hisoka.png";
 
 export default function Intro() {
     return (

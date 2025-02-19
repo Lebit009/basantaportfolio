@@ -1,3 +1,4 @@
+import { useState, useEffect } from "react";
 import { Nav, Navbar, Container } from "react-bootstrap";
 import "../css/NavBar.css";
 
@@ -23,8 +24,26 @@ const socialLinks = [
 ];
 
 export default function NavBar() {
+  const [navbarClass, setNavbarClass] = useState("nav");
+
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > 100) {
+        setNavbarClass("nav scrolled");
+      } else {
+        setNavbarClass("nav");
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+
   return (
-    <Navbar expand="lg" className="nav">
+    <Navbar expand="lg" className={navbarClass}>
       <Container>
         {/* Logo Section */}
         <Navbar.Brand href="#home">
@@ -41,7 +60,7 @@ export default function NavBar() {
         {/* Collapsible Navbar */}
         <Navbar.Collapse id="responsive-navbar-nav">
           <Nav className="me-auto">
-            <Nav.Link href="#portfolio">MyPortfolio</Nav.Link>
+            <Nav.Link href="/">MyPortfolio</Nav.Link>
           </Nav>
 
           {/* Social Links (Dynamically Generated) */}
@@ -52,8 +71,7 @@ export default function NavBar() {
                 href={link.url}
                 target="blank"
                 rel="noopener noreferrer"
-                style={{ display: "flex", alignItems: "center" ,  outline: "none",
-                  boxShadow: "none"}}
+                style={{ display: "flex", alignItems: "center", outline: "none", boxShadow: "none" }}
               >
                 <i
                   className={`fa ${link.icon}`}
