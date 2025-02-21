@@ -1,67 +1,114 @@
-.navbar {position: fixed;
-width: 100%;
-top: 0;
-left: 0;
-transition: 0.5s all ease-out;
-background-color: transparent;
-box-shadow: none;
+/* Navbar Styles */
+.nav {
+  /* background: rgba(20, 20, 20, 0.8); Slight transparency */
+  backdrop-filter: blur(8px); /* Smooth blur effect */
+  transition: background 0.3s ease-in-out;
+  padding: 12px 0;
 }
 
-.navbar.scrolled {
-background-color: rgb(105, 47, 19) !important;
-box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3) !important;
+/* Scrolled Navbar */
+.nav.scrolled {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: rgb(44, 53, 63);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  z-index: 1000;
+  transition: top 0.3s ease-in-out;
 }
 
-.navbar a {
-  color: rgb(255, 255, 255) !important;
-  font-size: medium !important;
+.nav-links {
+  display: flex;
+  gap: 15px;
+  align-items: center;
+  margin-left: auto; /* Pushes the nav links to the right */
 }
-/* App.css */
-.nav-link:hover i {
-    transform: scale(1.2); /* Slightly increase size on hover */
-    transition: transform 0.3s ease;
-    color: #ff6347; /* Change color on hover */
+/* Logo Styling */
+.me-auto {
+  font-family: "Lucida Handwriting", cursive;
+  font-size: 28px;
+  font-weight: 700;
+  /* text-transform: uppercase; */
+  letter-spacing: 1.5px;
+  background: linear-gradient(45deg, #ff4b2b, #ff416c);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  display: inline-block;
+  position: relative;
+  margin-left: 20px; /* Adjust for spacing */
+}
+
+/* Special Effect on "Portfolio" */
+.me-auto span {
+  color: white;
+  background: rgba(0, 0, 0, 0.2);
+  padding: 4px 10px;
+  border-radius: 8px;
+  font-size: 24px;
+  transition: all 0.3s ease-in-out;
+}
+
+/* Hover Effects */
+.me-auto:hover {
+  transform: scale(1.05);
+  transition: transform 0.3s ease-in-out;
+}
+
+.me-auto span:hover {
+  background: rgba(255, 255, 255, 0.4);
+}
+
+/* Navigation Links */
+.nav-links {
+  display: flex;
+  gap: 15px;
+  align-items: center;
+}
+
+/* Individual Navigation Button */
+.nav-btn {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  text-decoration: none;
+  background: rgba(255, 255, 255, 0.1);
+  padding: 8px 14px;
+  border-radius: 25px;
+  transition: all 0.3s ease-in-out;
+  color: white;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+/* Active Link */
+.nav-btn.active {
+  background: #ff6347; /* Tomato color for active state */
+  color: white;
+  box-shadow: 0 3px 6px rgba(255, 99, 71, 0.3);
+}
+
+/* Icon Styling */
+.btn-icon {
+  width: 20px;
+  height: auto;
+}
+
+/* Hover Effect */
+.nav-btn:hover {
+  transform: translateY(-3px);
+  background: rgba(255, 255, 255, 0.2);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .nav-links {
+    flex-direction: column;
+    gap: 10px;
   }
-  /* #animated-text {
-    font-size: 48px;
-    font-family: 'Arial', sans-serif;
-    font-weight: bold;
-    display: inline-block;
-    opacity: 0;
-    animation: slideIn 2s forwards;
-  }
-  
-  @keyframes slideIn {
-    0% {
-      opacity: 0;
-      transform: translateY(0px); 
-    }
-    100% {
-      opacity: 1;
-      transform: translateY(5); 
-    }
-  } */
-.imgg{
-    margin: auto;
-    height: 40px;
-}
-.navbar a:hover {
-  color: rgb(0, 195, 230) !important;
-}
-.navbar .dropdown-menu {
-  position: absolute !important;
-  margin-top: 0;
 
-  background: rgb(0, 0, 0);
-}
-
-@media screen and (max-width: 990px) {
-  .navbar {
-    outline: none;
-    background-color: rgba(255, 255, 255, 0.9) !important;
-    transition: all 0.5s;
+  .nav-btn {
+    width: 100%;
+    justify-content: center;
   }
-}
-.intro-description{
-    padding: 2%;
 }

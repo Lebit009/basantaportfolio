@@ -1,30 +1,12 @@
 import { useState, useEffect } from "react";
 import { Nav, Navbar, Container } from "react-bootstrap";
+import { Link, useLocation } from "react-router-dom";
 import "../css/NavBar.css";
-
-const socialLinks = [
-  {
-    name: "Facebook",
-    url: "https://facebook.com/lebit.magar",
-    icon: "fa-facebook",
-    color: "#3b5998",
-  },
-  {
-    name: "LinkedIn",
-    url: "https:linkedin.com/in/basanta0lebitmgr/",
-    icon: "fa-linkedin",
-    color: "#0077b5",
-  },
-  {
-    name: "Gmail",
-    url: "mailto:lebitmagar@gmail.com",
-    icon: "fa-envelope",
-    color: "#db4437",
-  },
-];
 
 export default function NavBar() {
   const [navbarClass, setNavbarClass] = useState("nav");
+  const location = useLocation();
+  const currentPath = location.pathname;
 
   useEffect(() => {
     const handleScroll = () => {
@@ -36,55 +18,52 @@ export default function NavBar() {
     };
 
     window.addEventListener("scroll", handleScroll);
-
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-    };
+    return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
   return (
     <Navbar expand="lg" className={navbarClass}>
       <Container>
-        {/* Logo Section */}
-        <Navbar.Brand href="#home">
-          <img
-            src="https://cdni.iconscout.com/illustration/premium/thumb/portfolio-illustration-download-in-svg-png-gif-file-formats--actress-making-multimedia-industry-pack-illustrations-5624195.png"
-            className="imgg"
-            alt="logo"
-          />
-        </Navbar.Brand>
-
+        <Nav className="me-auto">
+          <Nav.Link href="/">myPortfolio</Nav.Link>
+        </Nav>
         {/* Responsive Toggle Button */}
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
 
         {/* Collapsible Navbar */}
         <Navbar.Collapse id="responsive-navbar-nav">
-          <Nav className="me-auto">
-            <Nav.Link href="/">MyPortfolio</Nav.Link>
-          </Nav>
-
-          {/* Social Links (Dynamically Generated) */}
-          <Nav>
-            {socialLinks.map((link, index) => (
-              <Nav.Link
-                key={index}
-                href={link.url}
-                target="blank"
-                rel="noopener noreferrer"
-                style={{ display: "flex", alignItems: "center", outline: "none", boxShadow: "none" }}
-              >
-                <i
-                  className={`fa ${link.icon}`}
-                  style={{
-                    fontSize: "20px",
-                    color: link.color,
-                    marginRight: "10px",
-                  }}
-                  aria-hidden="true"
-                ></i>
-                {link.name}
-              </Nav.Link>
-            ))}
+          {/* Navigation Links with Icons */}
+          <Nav className="nav-links">
+            <Link
+              to="/education"
+              className={`nav-btn ${
+                currentPath === "/education" ? "active" : ""
+              }`}
+            >
+              <span>Education</span>
+            </Link>
+            <Link
+              to="/experience"
+              className={`nav-btn ${
+                currentPath === "/experience" ? "active" : ""
+              }`}
+            >
+              <span>Experience</span>
+            </Link>
+            <Link
+              to="/skills"
+              className={`nav-btn ${currentPath === "/skills" ? "active" : ""}`}
+            >
+              <span>Skills</span>
+            </Link>
+            <Link
+              to="/practice"
+              className={`nav-btn ${
+                currentPath === "/practice" ? "active" : ""
+              }`}
+            >
+              <span>My Practice</span>
+            </Link>
           </Nav>
         </Navbar.Collapse>
       </Container>

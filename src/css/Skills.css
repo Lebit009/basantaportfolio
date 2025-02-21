@@ -1,8 +1,9 @@
 .skills-container{
     padding: 40px 0;
     flex-wrap: wrap;
-    background: linear-gradient(to right, #331c12, #381f17, #301712); 
-
+    background: rgb(10, 27, 73); 
+    text-align: center;
+    color: #ffffff;
 }
 
 /* Grid Layout for Skills */
@@ -13,7 +14,7 @@
     gap: 40px;
     padding: 50px 10%;
     /* background: linear-gradient(to right, #306880, #203a43, #2c5364); Dark gradient */
-    color: #fff;
+    
 }
 
 /* Individual Skill Card */
@@ -31,17 +32,16 @@
 
 /* Logo Styling */
 .skill-logo {
-    width: 90px;
-    height: 90px;
+    width: 70px;
+    height: 70px;
     margin-bottom: 10px;
 }
 
-/* Text Styling */
-/* .skill-card p {
+.skill-card p {
     font-size: 1rem;
     font-weight: 500;
     color: #ffffff;
-} */
+}
 
 /* Responsive Design */
 @media (max-width: 768px) {

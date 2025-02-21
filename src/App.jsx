@@ -1,32 +1,23 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import NavBar from "./components/NavBar";
-import 'bootstrap/dist/css/bootstrap.min.css';
-import Cards from "./components/Cards";
+import "bootstrap/dist/css/bootstrap.min.css";
 import Intro from "./components/Intro";
-import Pages from "./components/Pages";
-import Education from "./components/Education";
-import Experience from "./components/Experience";
+import "../src/App.css";
+import Footer from "./components/Footer";
 import Skills from "./components/Skills";
-import Practice from "./components/Practice";
-import 'font-awesome/css/font-awesome.min.css';
+import "font-awesome/css/font-awesome.min.css";
 import Togglebutton from "./components/Togglebutton";
 export default function App() {
-
   return (
     <Router>
       <div className="App">
-       <NavBar/>
-       <Intro />
-       <Pages/>
-       <Routes>
-        <Route path="/education" element={<Education />} />
-        <Route path="/experience" element={<Experience />} />
-        <Route path="/skills" element={<Skills />} />
-        <Route path="/practice" element={<Practice />} />
-       </Routes>
-       {/* <Cards/> */}
-       <Togglebutton/>
-    </div>
+        <NavBar />
+        <Intro />
+        <Skills />
+        {/* <Cards/> */}
+        <Togglebutton />
+        <Footer />
+      </div>
     </Router>
-  )
-};
+  );
+}
