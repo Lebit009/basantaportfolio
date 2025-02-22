@@ -3,9 +3,7 @@
   /* background: rgba(20, 20, 20, 0.8); Slight transparency */
   backdrop-filter: blur(8px); /* Smooth blur effect */
   transition: background 0.3s ease-in-out;
-  padding: 12px 0;
 }
-
 /* Scrolled Navbar */
 .nav.scrolled {
   position: fixed;
@@ -22,7 +20,7 @@
   display: flex;
   gap: 15px;
   align-items: center;
-  margin-left: auto; /* Pushes the nav links to the right */
+  margin-left: auto; 
 }
 /* Logo Styling */
 .me-auto {
@@ -36,18 +34,18 @@
   -webkit-text-fill-color: transparent;
   display: inline-block;
   position: relative;
-  margin-left: 20px; /* Adjust for spacing */
+  /* margin-left: 20px; Adjust for spacing */
 }
 
 /* Special Effect on "Portfolio" */
-.me-auto span {
+/* .me-auto span {
   color: white;
   background: rgba(0, 0, 0, 0.2);
   padding: 4px 10px;
   border-radius: 8px;
   font-size: 24px;
   transition: all 0.3s ease-in-out;
-}
+} */
 
 /* Hover Effects */
 .me-auto:hover {
@@ -57,6 +55,7 @@
 
 .me-auto span:hover {
   background: rgba(255, 255, 255, 0.4);
+  background: #ff6347;
 }
 
 /* Navigation Links */

@@ -33,9 +33,9 @@ export default function Intro() {
         ))}
       </div>
       </div>
-      <div className="intro-image">
+      {/* <div className="intro-image">
         <img src={hisoka} alt="Character Illustration" />
-      </div>
+      </div> */}
     </section>
   );
 }

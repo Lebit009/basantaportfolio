@@ -23,7 +23,7 @@ export default function NavBar() {
 
   return (
     <Navbar expand="lg" className={navbarClass}>
-      <Container>
+      <Container className="cont">
         <Nav className="me-auto">
           <Nav.Link href="/">myPortfolio</Nav.Link>
         </Nav>
