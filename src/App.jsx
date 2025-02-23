@@ -6,6 +6,8 @@ import "../src/App.css";
 import Footer from "./components/Footer";
 import Skills from "./components/Skills";
 import Education from "./components/Education";
+import Practice from "./components/Practice";
+import Cards from "./components/Cards";
 import "font-awesome/css/font-awesome.min.css";
 import Togglebutton from "./components/Togglebutton";
 export default function App() {
@@ -14,8 +16,14 @@ export default function App() {
       <div className="App">
         <NavBar />
         <Intro />
-        <Education/>
+        <Routes>
+          <Route exact path="/skills" element={<Skills />} />
+          <Route exact path="/education" element={<Education />} />
+          <Route exact path="/practice" element={<Practice />} />
+        </Routes>
+        {/* <Education/>
         <Skills />
+        <Practice/> */}
         {/* <Cards/> */}
         <Togglebutton />
         <Footer />

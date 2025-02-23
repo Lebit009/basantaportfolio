@@ -1,47 +1,158 @@
 .education-container {
-    text-align: center;
-    padding: 50px;
-    background-color: #e3f2fd; /* Light blue background */
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
+  /* --b: 5px; /* border thickness    
+  --c: #0000 25%,rgb(255, 0, 0) 0; 
+  padding: 10px;
+  background:
+    conic-gradient(from 90deg  at top    var(--b) left  var(--b),var(--c)) 0    0,
+    conic-gradient(from 180deg at top    var(--b) right var(--b),var(--c)) 100% 0,
+    conic-gradient(from 0deg   at bottom var(--b) left  var(--b),var(--c)) 0    100%,
+    conic-gradient(from -90deg at bottom var(--b) right var(--b),var(--c)) 100% 100%;
+  background-size: 50px 50px; 
+  background-repeat: no-repeat;
+  transition: .6s; */
+  cursor: pointer;
+}
+
+/* .education-container:hover {
+  background-size: 51% 51%;
+} */
+
+.education-container {
+  /* background-color: white; */
+  height: fit-content;
+  padding: 20px;
+  /* border-radius: 50% 50% 50% 50% / 50% 50% 50% 50%  ; */
+  /* box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); */
+  width: 100%; 
+  max-width: 900px;
+  margin: auto; 
+  text-align: center;
+}
+
+.education-title {
+  font-size: 31px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  color: #ffff;
+}
+
+/* Layout: Left - Image - Right */
+.education-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+/* Profile Image in the Center */
+.profile-image-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.profile-image {
+  width: 140px;
+  height: 140px;
+  border-radius: 50%;
+  background-color: aliceblue;
+  object-fit: cover;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+/* Education Columns (Left & Right) */
+.education-column {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  flex: 1;
+  min-width: 250px;
+}
+
+.education-card {
+  color: white;
+  padding: 15px;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  border: solid 5px transparent;
+  border-radius: 2em;
+  --border-angle: 0turn;
   
+  background: conic-gradient(from var(--border-angle), #213, #112 5%, #112 60%, #213 95%) padding-box,
+              conic-gradient(from var(--border-angle), transparent 25%, #08f, #f03 99%, transparent) border-box;
+
+  animation: border-spin 3s linear infinite;
+}
+
+@keyframes border-spin {
+  to {
+    --border-angle: 1turn;
+  }
+}
+
+@property --border-angle {
+  syntax: "<angle>";
+  inherits: true;
+  initial-value: 0turn;
+}
+.education-card:hover {
+  animation-play-state: paused;
+}
+
+/* University Logo Inside Each Card */
+.education-logo {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  object-fit: contain;
+  flex-shrink: 0;
+}
+
+/* Text Information */
+.education-details {
+  display: flex;
+  flex-direction: column;
+}
+
+.education-details h2 {
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.education-details p {
+  font-size: 14px;
+  color: #ffffff;
+}
+
+.education-details span {
+  font-size: 12px;
+  color: #ffffff;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
   .education-content {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 80%;
-    margin-top: 20px;
-    gap: 50px;
-  }
-  
-  .education-image img {
-    width: 200px; /* Adjust as needed */
-    height: auto;
-    border-radius: 10px;
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
-  }
-  
-  .education-history {
-    display: flex;
     flex-direction: column;
-    gap: 20px;
+    align-items: center;
   }
-  
+
+  .education-column {
+    align-items: center;
+  }
+
   .education-card {
-    background: white;
-    padding: 15px;
-    border-radius: 10px;
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
-    text-align: left;
     width: 100%;
-    max-width: 400px;
-    transition: transform 0.3s ease;
+    justify-content: center;
+    text-align: center;
   }
-  
-  .education-card:hover {
-    transform: scale(1.05);
+  .education-details {
+    display: flex;
+    flex-direction: row;
+    
   }
-  
+}
