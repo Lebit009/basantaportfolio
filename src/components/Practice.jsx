@@ -1,39 +1,47 @@
 import React from "react";
 import { motion } from "framer-motion";
 import "../css/Practice.css"; // Import CSS
+import powerbiImg from "../assets/img/student.png"; 
 
 const cardData = [
-  { id: 1, title: "Card 1", content: "This is card one." },
-  { id: 2, title: "Card 2", content: "This is card two." },
-  { id: 3, title: "Card 3", content: "This is card three." },
-  { id: 4, title: "Card 4", content: "This is card four." },
-  { id: 5, title: "Card 5", content: "This is card five." },
-  { id: 6, title: "Card 6", content: "This is card six." },
-  { id: 7, title: "Card 7", content: "This is card seven." },
-  { id: 8, title: "Card 8", content: "This is card eight." },
+  {
+    id: 1,
+    title: "Power BI Dashboard",
+    content: "Explore my interactive Power BI dashboard showcasing data insights and visualizations.",
+    image:  powerbiImg,
+    link: "https://app.powerbi.com/links/93VeLrx0FP?ctid=c09afb75-1cf8-46ca-9c5e-0a01bfbd86f2&pbi_source=linkShare"
+  }
 ];
-
-const columns = 3; // Define the number of columns
 
 export default function Practice() {
   return (
     <div className="cards-container">
-      {cardData.map((card, index) => {
-        const columnIndex = index % columns; // Determine the column index (0, 1, 2)
-        return (
-          <motion.div
-            key={card.id}
-            className="card"
-            initial={{ opacity: 0, y: 50 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.9, delay: columnIndex * 0.2 }} // Delay per column
-            viewport={{ once: false, amount: 0.3 }}
+      {cardData.map((card) => (
+        <motion.div
+          key={card.id}
+          className="card"
+          initial={{ opacity: 0, y: 50 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.9 }}
+          viewport={{ once: false, amount: 0.3 }}
+        >
+          <img
+            src={card.image}
+            alt={card.title}
+            style={{ width: "100%", maxWidth: "250px", marginBottom: "1rem" }}
+          />
+          <h3>{card.title}</h3>
+          <p>{card.content}</p>
+          <a
+            href={card.link}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="powerbi-link"
           >
-            <h3>{card.title}</h3>
-            <p>{card.content}</p>
-          </motion.div>
-        );
-      })}
+            View Dashboard
+          </a>
+        </motion.div>
+      ))}
     </div>
   );
 }
