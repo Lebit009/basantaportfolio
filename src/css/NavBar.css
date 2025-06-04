@@ -4,6 +4,7 @@
   backdrop-filter: blur(8px); /* Smooth blur effect */
   transition: background 0.3s ease-in-out;
 }
+
 /* Scrolled Navbar */
 .nav.scrolled {
   position: fixed;
