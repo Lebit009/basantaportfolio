@@ -2,7 +2,7 @@ import "../css/Skills.css";
 import { motion } from "framer-motion";
 
 // Importing Logos
-import reactLogo from "../assets/img/react.SVG";
+import reactLogo from "../assets/img/react.svg";
 import nodeLogo from "../assets/img/nodejs.svg";
 import htmlLogo from "../assets/img/html.svg";
 import cssLogo from "../assets/img/css.svg";
