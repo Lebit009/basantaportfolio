@@ -55,7 +55,7 @@
 }
 
 .me-auto span:hover {
-  background: rgba(255, 255, 255, 0.4);
+  background: rgba(255, 0, 0, 0.4);
   background: #ff6347;
 }
 
@@ -66,26 +66,25 @@
   align-items: center;
 }
 
-/* Individual Navigation Button */
 .nav-btn {
   display: flex;
   align-items: center;
   gap: 6px;
   text-decoration: none;
-  background: rgba(255, 255, 255, 0.1);
-  padding: 8px 14px;
+  background: rgba(182, 182, 182, 0.85); /* dark semi-transparent */
+  padding: 8px 18px;
   border-radius: 25px;
   transition: all 0.3s ease-in-out;
-  color: white;
-  font-size: 14px;
+  color: #000000; /* white text */
+  font-size: 15px;
   font-weight: 500;
+  box-shadow: 0 2px 8px rgba(44,53,63,0.08);
 }
 
-/* Active Link */
 .nav-btn.active {
-  background: #ff6347; /* Tomato color for active state */
-  color: white;
-  box-shadow: 0 3px 6px rgba(255, 99, 71, 0.3);
+  background: linear-gradient(90deg, #ff4b2b 0%, #ff416c 100%);
+  color: #fff;
+  box-shadow: 0 3px 12px rgba(255, 99, 71, 0.18);
 }
 
 /* Icon Styling */
@@ -97,7 +96,8 @@
 /* Hover Effect */
 .nav-btn:hover {
   transform: translateY(-3px);
-  background: rgba(255, 255, 255, 0.2);
+  color: #fff;
+  background: rgba(0, 0, 0, 0.2);
 }
 
 /* Responsive Design */

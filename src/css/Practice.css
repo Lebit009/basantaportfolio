@@ -66,3 +66,9 @@
     width: 80px;
   }
 }
+.section-title {
+ margin: auto;
+    /* background: rgb(10, 27, 73);  */
+    text-align: center;
+    color: #000000;
+}

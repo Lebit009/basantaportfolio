@@ -21,9 +21,9 @@ export default function Intro() {
     <section className="intro-container">
       <div className="intro-content">
         <h1 className="animated-text">Hi, I'm Roronoa Zoro</h1>
-        <p className="intro-text">
+        <h1 className="intro-text">
           Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-        </p>
+        </h1>
         <div className="social-links">
         {socialLinks.map((link, index) => (
           <a key={index} href={link.url} target="_blank" rel="noopener noreferrer" className="social-btn">

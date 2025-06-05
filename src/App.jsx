@@ -10,6 +10,7 @@ import Practice from "./components/Practice";
 import Cards from "./components/Cards";
 import "font-awesome/css/font-awesome.min.css";
 import Togglebutton from "./components/Togglebutton";
+import Experience from "./components/Experience";
 export default function App() {
   return (
     <Router>
@@ -19,6 +20,7 @@ export default function App() {
         <Routes>
           <Route exact path="/skills" element={<Skills />} />
           <Route exact path="/education" element={<Education />} />
+          <Route exact path="/experience" element={<Experience />} />
           <Route exact path="/practice" element={<Practice />} />
         </Routes>
         {/* <Education/>
