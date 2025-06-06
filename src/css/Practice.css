@@ -57,15 +57,20 @@
 }
 
 /* Responsive for small screens */
-@media (max-width: 600px) {
+@media (max-width: 800px) {
   .card {
     padding: 20px 8px;
     max-width: 95vw;
   }
-  .card img {
+  /* .card img {
     width: 80px;
+  } */
+  .cards-container{
+    flex-direction: column;
+    align-items: center;
   }
 }
+
 .section-title {
  margin: auto;
     /* background: rgb(10, 27, 73);  */

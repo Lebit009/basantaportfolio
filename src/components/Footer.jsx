@@ -10,22 +10,21 @@ export default function Footer() {
         <div className="footer-section about">
           <h4>About Me</h4>
           <p>
-            We are a team of passionate professionals delivering innovative solutions 
-            to enhance business efficiency.
+            I am a dedicated professional committed to delivering innovative solutions that drive business success and efficiency.
           </p>
         </div>
 
         {/* Contact Section */}
         <div className="footer-section contact">
-          <h4>Connect with Me</h4>
+          <h4>Contact</h4>
           <ul>
             <li>
               <FaEnvelope className="icon" />
-              <a href="mailto:info@yourcompany.com">lebitmagar@gmail.com</a>
+              <a href="mailto:lebitmagar@gmail.com">lebitmagar@gmail.com</a>
             </li>
             <li>
               <FaPhone className="icon" />
-              <a href="tel:+61 04156516316">+61 0415651631</a>
+              <a href="tel:+610415651631">+61 0415 651 631</a>
             </li>
           </ul>
         </div>
@@ -34,16 +33,16 @@ export default function Footer() {
         <div className="footer-section social">
           <h4>Follow Me</h4>
           <div className="social-icons">
-            <a href="#"><FaFacebookF /></a>
-            <a href="#"><FaTwitter /></a>
-            <a href="#"><FaLinkedinIn /></a>
+            <a href="https://facebook.com/lebit.magar" aria-label="Facebook"><FaFacebookF /></a>
+            <a href="#" aria-label="Twitter"><FaTwitter /></a>
+            <a href="https://linkedin.com/in/basanta0lebitmgr/" aria-label="LinkedIn"><FaLinkedinIn /></a>
           </div>
         </div>
       </div>
 
       {/* Copyright */}
       <div className="footer-bottom">
-        <p>© 2025 YourCompany. All Rights Reserved.</p>
+        <p>© 2025 Basanta Thapa. All Rights Reserved.</p>
       </div>
     </footer>
   );

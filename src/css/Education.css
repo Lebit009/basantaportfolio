@@ -1,30 +1,12 @@
 .education-container {
-  /* --b: 5px; /* border thickness    
-  --c: #0000 25%,rgb(255, 0, 0) 0; 
-  padding: 10px;
-  background:
-    conic-gradient(from 90deg  at top    var(--b) left  var(--b),var(--c)) 0    0,
-    conic-gradient(from 180deg at top    var(--b) right var(--b),var(--c)) 100% 0,
-    conic-gradient(from 0deg   at bottom var(--b) left  var(--b),var(--c)) 0    100%,
-    conic-gradient(from -90deg at bottom var(--b) right var(--b),var(--c)) 100% 100%;
-  background-size: 50px 50px; 
-  background-repeat: no-repeat;
-  transition: .6s; */
-  cursor: pointer;
-}
-
-/* .education-container:hover {
-  background-size: 51% 51%;
-} */
-
-.education-container {
   /* background-color: white; */
-  height: fit-content;
+  /* height: fit-content; */
   padding: 20px;
   /* border-radius: 50% 50% 50% 50% / 50% 50% 50% 50%  ; */
   /* box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); */
-  width: 100%; 
-  max-width: 900px;
+  /* width: 100%;  */
+  max-width: fit-content;
+  display: flex;
   margin: auto; 
   text-align: center;
 }
@@ -43,6 +25,9 @@
   justify-content: center;
   gap: 30px;
   flex-wrap: wrap;
+}
+h1{
+  text-align: center;
 }
 
 /* Profile Image in the Center */

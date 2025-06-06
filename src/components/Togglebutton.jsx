@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import '../css/Togglebutton.css'; 
-import { FaCircleArrowLeft } from "react-icons/fa6";
 
 function Togglebutton() {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -12,8 +11,13 @@ function Togglebutton() {
 
   return (
     <div className="Togglebutton">
-      <div className="toggle-btn" onClick={() => setMenuOpen(!menuOpen)}>
-      <FaCircleArrowLeft/>
+      <div
+        className="toggle-btn floating-btn"
+        onClick={() => setMenuOpen(!menuOpen)}
+      >
+        <span className="floating-dot"></span>
+        <span className="floating-dot"></span>
+        <span className="floating-dot"></span>
       </div>
 
       {menuOpen && (

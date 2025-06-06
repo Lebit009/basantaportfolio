@@ -4,17 +4,25 @@
   backdrop-filter: blur(8px); /* Smooth blur effect */
   transition: background 0.3s ease-in-out;
 }
+.navbar-toggler {
+  border: none !important;
+  outline: none !important;
+  box-shadow: none !important;
+}
 
 /* Scrolled Navbar */
+@media (min-width: 768px) {
 .nav.scrolled {
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
-  background: rgb(44, 53, 63);
+  background: #1a1a1a;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
   z-index: 1000;
+  color: #fff;
   transition: top 0.3s ease-in-out;
+}
 }
 
 .nav-links {
@@ -55,8 +63,8 @@
 }
 
 .me-auto span:hover {
-  background: rgba(255, 0, 0, 0.4);
-  background: #ff6347;
+  background: rgba(220, 209, 209, 0.4);
+
 }
 
 /* Navigation Links */
@@ -97,7 +105,7 @@
 .nav-btn:hover {
   transform: translateY(-3px);
   color: #fff;
-  background: rgba(0, 0, 0, 0.2);
+  background: linear-gradient(90deg, #ff4b2b 0%, #ff416c 100%);
 }
 
 /* Responsive Design */
@@ -107,8 +115,20 @@
     gap: 10px;
   }
 
+.nav.scrolled {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  /* background: #1a1a1a; */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  z-index: 1000;
+  color: #fff;
+  transition: top 0.3s ease-in-out;
+}
   .nav-btn {
     width: 100%;
     justify-content: center;
   }
 }
+

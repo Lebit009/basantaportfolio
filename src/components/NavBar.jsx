@@ -29,7 +29,6 @@ export default function NavBar() {
         </Nav>
         {/* Responsive Toggle Button */}
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
-
         {/* Collapsible Navbar */}
         <Navbar.Collapse id="responsive-navbar-nav">
           {/* Navigation Links with Icons */}
