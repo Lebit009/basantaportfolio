@@ -23,7 +23,7 @@
 }
 
 .card img {
-  width: 120px;
+  width: auto;
   height: auto;
   margin-bottom: 1rem;
 }
@@ -43,8 +43,8 @@
 .powerbi-link {
   display: inline-block;
   padding: 10px 24px;
-  background: #facc15;
-  color: #1e293b;
+  background: linear-gradient(90deg, #b84343 0%, #c9234a 100%);
+  color: #ffffff;
   border-radius: 8px;
   text-decoration: none;
   font-weight: bold;
@@ -52,7 +52,7 @@
 }
 
 .powerbi-link:hover {
-  background: #eab308;
+  background: #494949;
   color: #fff;
 }
 

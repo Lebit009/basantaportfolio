@@ -23,9 +23,9 @@ export default function Education() {
   const rightSide = educationHistory.filter((_, index) => index % 2 !== 0);
 
   return (
-    <div>
-       <h1 className="education-title">Education</h1>
+       
     <div className="education-container" >
+      <h1 className="education-title">Education</h1>
       <div className="education-content">
         <div className="education-column">
           {leftSide.map((edu, index) => (
@@ -56,7 +56,6 @@ export default function Education() {
             </div>
           ))}
         </div>
-      </div>
     </div>
     </div>
   );
