@@ -1,20 +1,32 @@
 import { useState, useEffect } from "react";
 import { Nav, Navbar, Container } from "react-bootstrap";
-import { Link, useLocation } from "react-router-dom";
 import "../css/NavBar.css";
 
 export default function NavBar() {
   const [navbarClass, setNavbarClass] = useState("nav");
-  const location = useLocation();
-  const currentPath = location.pathname;
+  const [activeSection, setActiveSection] = useState("intro");
 
   useEffect(() => {
     const handleScroll = () => {
-      if (window.scrollY > 100) {
+      if (window.scrollY > 10) {
         setNavbarClass("nav scrolled");
       } else {
         setNavbarClass("nav");
       }
+
+      // ScrollSpy logic
+      const sections = ["intro", "skills", "education", "experience", "practice"];
+      let found = "intro";
+      for (let i = 0; i < sections.length; i++) {
+        const section = document.getElementById(sections[i]);
+        if (section) {
+          const rect = section.getBoundingClientRect();
+          if (rect.top <= 5) {
+            found = sections[i];
+          }
+        }
+      }
+      setActiveSection(found);
     };
 
     window.addEventListener("scroll", handleScroll);
@@ -25,44 +37,35 @@ export default function NavBar() {
     <Navbar expand="lg" className={navbarClass}>
       <Container className="cont">
         <Nav className="me-auto">
-          <Nav.Link href="/">myPortfolio</Nav.Link>
+          <Nav.Link href="#intro">myPortfolio</Nav.Link>
         </Nav>
-        {/* Responsive Toggle Button */}
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
-        {/* Collapsible Navbar */}
         <Navbar.Collapse id="responsive-navbar-nav">
-          {/* Navigation Links with Icons */}
           <Nav className="nav-links">
-            <Link
-              to="/education"
-              className={`nav-btn ${
-                currentPath === "/education" ? "active" : ""
-              }`}
+            <a
+              href="#education"
+              className={`nav-btn ${activeSection === "education" ? "active" : ""}`}
             >
               <span>Education</span>
-            </Link>
-            <Link
-              to="/experience"
-              className={`nav-btn ${
-                currentPath === "/experience" ? "active" : ""
-              }`}
+            </a>
+            <a
+              href="#experience"
+              className={`nav-btn ${activeSection === "experience" ? "active" : ""}`}
             >
               <span>Experience</span>
-            </Link>
-            <Link
-              to="/skills"
-              className={`nav-btn ${currentPath === "/skills" ? "active" : ""}`}
+            </a>
+            <a
+              href="#skills"
+              className={`nav-btn ${activeSection === "skills" ? "active" : ""}`}
             >
               <span>Skills</span>
-            </Link>
-            <Link
-              to="/practice"
-              className={`nav-btn ${
-                currentPath === "/practice" ? "active" : ""
-              }`}
+            </a>
+            <a
+              href="#practice"
+              className={`nav-btn ${activeSection === "practice" ? "active" : ""}`}
             >
               <span>My Practice</span>
-            </Link>
+            </a>
           </Nav>
         </Navbar.Collapse>
       </Container>

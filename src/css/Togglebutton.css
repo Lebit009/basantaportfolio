@@ -7,8 +7,8 @@
   align-items: center;
   justify-content: center;
   gap: 6px;
-  width: 56px;
-  height: 56px;
+  width: 45px;
+  height: 45px;
   border-radius: 50%;
   background: linear-gradient(135deg, #000000 0%, #ff0000 100%);
   box-shadow: 0 8px 24px rgba(0,123,255,0.18), 0 2px 8px rgba(0,0,0,0.10);
@@ -26,8 +26,8 @@
 }
 
 .floating-dot {
-  width: 10px;
-  height: 10px;
+  width: 5px;
+  height: 5px;
   border-radius: 50%;
   background: #fff;
   opacity: 0.9;

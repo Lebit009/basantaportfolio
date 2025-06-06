@@ -1,12 +1,12 @@
-body {
-    margin: 0;
+/* body {
+    margin-top: 10px;
     height: 100vh;
     /* background: linear-gradient(-45deg, #09324e, #132452, #375572, #1e232e); */
     /* background: rgb(121, 138, 146);
-    background: linear-gradient(120deg, #e0eafc 0%, #cfdef3 100%); */
+    background: linear-gradient(120deg, #e0eafc 0%, #cfdef3 100%); 
     background-size: 400% 400%;
     animation: gradientBG 8s ease infinite;
-  }
+  } */
 
   @keyframes gradientBG {
     0% {
@@ -24,4 +24,5 @@ body {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
+  /* margin-top: 60px; */
 }
