@@ -1,0 +1,148 @@
+.experience-pro-container {
+  max-width: fit-content;
+  margin: 0 auto;
+  padding: 56px 0;
+  position: relative;
+  /* background: #f8f9fa; */
+}
+
+.experience-title {
+  margin-bottom: 56px;
+  text-align: center;
+  font-weight: 700;
+  font-size: 2rem;
+  letter-spacing: 0.5px;
+  color: #223;
+}
+
+.experience-timeline-wrapper {
+  position: relative;
+  padding-left: 60px;
+}
+
+.experience-timeline-line {
+  position: absolute;
+  left: 36px;
+  top: 0;
+  bottom: 0;
+  width: 4px;
+  background: linear-gradient(to bottom, #FF5B7F, #FFA940, #36B6FF);
+  border-radius: 2px;
+  opacity: 0.18;
+  z-index: 0;
+}
+
+.experience-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.experience-list-item {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 56px;
+  min-height: 100px;
+  position: relative;
+  z-index: 1;
+}
+
+.experience-circle {
+  min-width: 56px;
+  min-height: 56px;
+  border-radius: 50%;
+  color: #fff;
+  font-weight: bold;
+  font-size: 22px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 32px;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.10);
+  border: 4px solid #fff;
+  position: relative;
+  top: 0;
+}
+
+.experience-card {
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 2px 12px rgba(44,53,63,0.07);
+  padding: 22px 32px;
+  font-size: 18px;
+  line-height: 1.5;
+  font-weight: 500;
+  color: #223;
+  min-width: 0;
+  flex: 1;
+}
+
+.experience-role {
+  font-weight: 700;
+  font-size: 20px;
+  margin-bottom: 4px;
+}
+
+.experience-meta {
+  color: #888;
+  font-size: 16px;
+  margin-bottom: 8px;
+}
+
+.experience-desc {
+  color: #223;
+}
+@media (max-width: 600px) {
+  .experience-pro-container {
+    padding: 18px 0;
+    max-width: 100vw;
+  }
+
+  .experience-title {
+    font-size: 1.1rem;
+    margin-bottom: 18px;
+    padding: 0 6px;
+  }
+
+  .experience-timeline-wrapper {
+    padding-left: 12px;
+  }
+
+  .experience-timeline-line {
+    left: 6px;
+    width: 2px;
+  }
+
+  .experience-list-item {
+    margin-bottom: 18px;
+    min-height: 36px;
+  }
+
+  .experience-circle {
+    min-width: 24px;
+    min-height: 24px;
+    font-size: 10px;
+    margin-right: 8px;
+    border-width: 2px;
+  }
+
+  .experience-card {
+    padding: 8px 8px;
+    font-size: 11px;
+    border-radius: 7px;
+  }
+
+  .experience-role {
+    font-size: 12px;
+    margin-bottom: 2px;
+  }
+
+  .experience-meta {
+    font-size: 9px;
+    margin-bottom: 4px;
+  }
+
+  .experience-desc {
+    font-size: 10px;
+  }
+}

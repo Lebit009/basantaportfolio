@@ -22,7 +22,7 @@ const cardData = [
 
 export default function Practice() {
   return (
-    <div>
+    <div className="practice-container">
     <h2 className="section-title">My Projects</h2>
     <div className="cards-container">
       {cardData.map((card) => (
