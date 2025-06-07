@@ -23,7 +23,6 @@ export default function Education() {
   const rightSide = educationHistory.filter((_, index) => index % 2 !== 0);
 
   return (
-       
     <div className="education-container" >
       <h1 className="education-title">Education</h1>
       <div className="education-content">

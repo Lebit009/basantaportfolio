@@ -1,6 +1,6 @@
 .education-container {
   /* background-color: white; */
-  /* height: fit-content; */
+  height: fit-content;
   padding: 20px;
   /* border-radius: 50% 50% 50% 50% / 50% 50% 50% 50%  ; */
   /* box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); */
@@ -8,7 +8,7 @@
   max-width: fit-content;
   display: flex;
   flex-direction: column;
-  margin: auto; 
+  margin: 60px auto; 
   flex-wrap: wrap;
   text-align: center;
 }
