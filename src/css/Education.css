@@ -143,3 +143,24 @@ h1{
     
   }
 }
+@media (max-width: 768px) {
+  .education-content {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .education-column {
+    align-items: center;
+  }
+
+  .education-card {
+    width: 100%;
+    justify-content: center;
+    text-align: center;
+    margin: 0 auto; /* Center the card horizontally on mobile */
+  }
+  .education-details {
+    display: flex;
+    flex-direction: row;
+  }
+}
