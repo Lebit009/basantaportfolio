@@ -33,7 +33,7 @@ export default function Intro() {
   return (
     <section className="intro-container">
       <div className="intro-content">
-        <h1 className="animated-text" ref={headingRef}>
+        <h1 className="animated-text" > 
           {heading.split("").map((char, i) =>
             char === " " ? (
               <span key={i}>&nbsp;</span>
@@ -43,7 +43,7 @@ export default function Intro() {
           )}
         </h1>
         <h1 className="intro-text">
-          Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+        I enjoy building clean, functional interfaces. I'm currently working on projects that reflect my learning journey and help sharpen my skills as I grow in the tech industry.
         </h1>
         <div className="social-links">
           {socialLinks.map((link, index) => (

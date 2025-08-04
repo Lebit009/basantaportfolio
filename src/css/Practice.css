@@ -7,7 +7,6 @@
   padding: 40px 0;
 }
 
-
 .card {
   background: #fff;
   border-radius: 16px;
@@ -78,4 +77,62 @@
     /* background: rgb(10, 27, 73);  */
     text-align: center;
     color: #000000;
+}
+
+
+.youtube-section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1.2rem;
+  padding: 1.2rem;
+  margin: 2rem auto 0 auto;
+}
+
+.youtube-section label {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #22223b;
+  white-space: nowrap;
+}
+
+.youtube-dropdown {
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  border: 1px solid #ececec;
+  font-size: 1rem;
+  background: #f6f6fd;
+  color: #22223b;
+  width: 500px;
+}
+
+.youtube-link {
+  padding: 0.6rem 1.2rem;
+  background: linear-gradient(90deg, #e63946 0%, #c9234a 100%);
+  color: #fff;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 1rem;
+  transition: background 0.2s;
+}
+
+.youtube-link:hover {
+  background: #a4161a;
+  text-decoration: underline;
+}
+
+@media (max-width: 700px) {
+  .youtube-section {
+    flex-direction: column;
+    gap: 0.8rem;
+    max-width: 98vw;
+    padding: 0.8rem;
+  }
+  .youtube-section label,
+  .youtube-dropdown,
+  .youtube-link {
+    width: 100%;
+    text-align: center;
+  }
 }

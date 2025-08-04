@@ -20,7 +20,6 @@ font-size: 2.5rem;
   font-weight: 700;
   color: #e53935;
   margin-bottom: 12px;
-  letter-spacing: 1px;
   animation: fadeInDown 1s cubic-bezier(0.23, 1, 0.32, 1);
 }
 

@@ -4,26 +4,19 @@ import "../css/Experience.css";
 
 const jobs = [
   {
-    company: "Tech Solutions",
+    company: "Softwarica College of IT and E-commerce",
     role: "Frontend Developer",
-    year: "2024",
-    description: "Built responsive web apps with React and improved UI/UX for enterprise clients.",
+    year: "2021",
+    description: "Built responsive website named information portal for students.",
     color: "#FF5B7F",
   },
   {
-    company: "Startup Inc.",
-    role: "Full Stack Engineer",
-    year: "2022 - 2023",
-    description: "Developed scalable APIs and integrated cloud services for a fast-growing SaaS product.",
+    company: "Victorian Institute of Technology",
+    role: "Full Stack Developer",
+    year: "March-June 2024",
+    description: " Internship – Developed a web application to collect data from companies and generate insightful visual reports based on the stored information.",
     color: "#FFA940",
-  },
-  {
-    company: "Creative Studio",
-    role: "UI/UX Designer",
-    year: "2021 - 2022",
-    description: "Designed modern interfaces and conducted user research for mobile and web platforms.",
-    color: "#36B6FF",
-  },
+  }
 ];
 
 export default function Experience() {
