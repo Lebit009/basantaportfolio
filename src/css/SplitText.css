@@ -1,0 +1,27 @@
+.split-text {
+  display: inline-block;
+  white-space: pre-wrap;
+}
+
+.split-word {
+  display: inline-block;
+}
+
+.split-char {
+  display: inline-block;
+  opacity: 0;
+  transform: translateY(30px);
+  animation: splitFadeIn var(--split-duration, 0.5s) cubic-bezier(0.23, 1, 0.32, 1) forwards;
+}
+
+@keyframes splitFadeIn {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.split-space {
+  display: inline-block;
+  width: 0.5em;
+}

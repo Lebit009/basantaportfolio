@@ -1,0 +1,57 @@
+.skills-container{
+    padding: 40px 0;
+    flex-wrap: wrap;
+    /* background: rgb(10, 27, 73);  */
+    text-align: center;
+    color: #000000;
+    margin: 50px auto ;
+}
+
+/* Grid Layout for Skills */
+.skills-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 40px;
+    padding: 50px 10%;
+    /* background: linear-gradient(to right, #306880, #203a43, #2c5364); Dark gradient */
+    
+}
+
+/* Individual Skill Card */
+.skill-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* transition: transform 0.3s ease-in-out; */
+}
+
+.skill-card:hover {
+    transform: scale(1.2); 
+    transition: transform 0.3s ease;
+}
+
+/* Logo Styling */
+.skill-logo {
+    width: 70px;
+    height: 70px;
+    margin-bottom: 10px;
+}
+
+.skill-card p {
+    font-size: 1rem;
+    font-weight: 500;
+    color: #000000;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .skills-grid {
+        grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    }
+
+    .skill-logo {
+        width: 60px;
+        height: 60px;
+    }
+}

@@ -1,0 +1,133 @@
+.section-title{
+     margin-bottom: 56px;
+  text-align: center;
+  font-weight: 700;
+  font-size: 2rem;
+  letter-spacing: 0.5px;
+  color: #223;
+}
+.cards-container {
+  display: flex;
+  justify-content: center;
+  align-items: stretch; 
+  flex-wrap: wrap;       
+  gap: 24px;             
+  padding: 40px 20px;    
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.card {
+  background: #fff;
+  border-radius: 16px;
+  box-shadow: 0 4px 24px rgba(30, 41, 59, 0.12);
+  padding: 32px 24px;
+  flex: 1 1 320px;      
+  max-width: 350px;
+  text-align: center;
+  transition: transform 0.2s, box-shadow 0.2s;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.card:hover {
+  transform: translateY(-8px) scale(1.03);
+  box-shadow: 0 8px 32px rgba(30, 41, 59, 0.18);
+}
+
+.card img {
+  height: 140px;
+  width: 270px;
+  object-fit: cover;
+  margin-bottom: 1rem;
+  flex-shrink: 0;
+}
+
+.card h3 {
+  margin: 0.5rem 0 1rem 0;
+  color: #1e293b;
+  font-size: 1.3rem;
+  flex-shrink: 0;
+}
+
+.card p {
+  color: #334155;
+  font-size: 1rem;
+  margin-bottom: 1.5rem;
+  flex-grow: 1;
+}
+
+.powerbi-link {
+  display: inline-block;
+  padding: 10px 24px;
+  background: linear-gradient(90deg, #b84343 0%, #c9234a 100%);
+  color: #ffffff;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background 0.2s;
+  white-space: nowrap;
+}
+
+.powerbi-link:hover {
+  background: #494949;
+  color: #fff;
+}
+
+.youtube-section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1.2rem;
+  padding: 1.2rem;
+  margin: 2rem auto 0 auto;
+}
+
+.youtube-section label {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #22223b;
+  white-space: nowrap;
+}
+
+.youtube-dropdown {
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  border: 1px solid #ececec;
+  font-size: 1rem;
+  background: #f6f6fd;
+  color: #22223b;
+  width: 500px;
+}
+
+.youtube-link {
+  padding: 0.6rem 1.2rem;
+  background: linear-gradient(90deg, #e63946 0%, #c9234a 100%);
+  color: #fff;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 1rem;
+  transition: background 0.2s;
+}
+
+.youtube-link:hover {
+  background: #a4161a;
+  text-decoration: underline;
+}
+
+@media (max-width: 700px) {
+  .youtube-section {
+    flex-direction: column;
+    gap: 0.8rem;
+    max-width: 98vw;
+    padding: 0.8rem;
+  }
+  .youtube-section label,
+  .youtube-dropdown,
+  .youtube-link {
+    width: 100%;
+    text-align: center;
+  }
+}

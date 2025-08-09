@@ -1,0 +1,134 @@
+/* Navbar Styles */
+.nav {
+  /* background: rgba(20, 20, 20, 0.8); Slight transparency */
+  backdrop-filter: blur(8px); /* Smooth blur effect */
+  transition: background 0.3s ease-in-out;
+}
+.navbar-toggler {
+  border: none !important;
+  outline: none !important;
+  box-shadow: none !important;
+}
+
+/* Scrolled Navbar */
+@media (min-width: 768px) {
+.nav.scrolled {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: #1a1a1a;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  z-index: 1000;
+  color: #fff;
+  transition: top 0.3s ease-in-out;
+}
+}
+
+.nav-links {
+  display: flex;
+  gap: 15px;
+  align-items: center;
+  margin-left: auto; 
+}
+/* Logo Styling */
+.me-auto {
+  font-family: "Lucida Handwriting", cursive;
+  font-size: 28px;
+  font-weight: 700;
+  /* text-transform: uppercase; */
+  letter-spacing: 1.5px;
+  background: linear-gradient(45deg, #ff4b2b, #ff416c);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  display: inline-block;
+  position: relative;
+  /* margin-left: 20px; Adjust for spacing */
+}
+
+/* Special Effect on "Portfolio" */
+/* .me-auto span {
+  color: white;
+  background: rgba(0, 0, 0, 0.2);
+  padding: 4px 10px;
+  border-radius: 8px;
+  font-size: 24px;
+  transition: all 0.3s ease-in-out;
+} */
+
+/* Hover Effects */
+.me-auto:hover {
+  transform: scale(1.05);
+  transition: transform 0.3s ease-in-out;
+}
+
+.me-auto span:hover {
+  background: rgba(220, 209, 209, 0.4);
+
+}
+
+/* Navigation Links */
+.nav-links {
+  display: flex;
+  gap: 15px;
+  align-items: center;
+}
+
+.nav-btn {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  text-decoration: none;
+  background: rgba(182, 182, 182, 0.85); /* dark semi-transparent */
+  padding: 8px 18px;
+  border-radius: 25px;
+  transition: all 0.3s ease-in-out;
+  color: #000000; /* white text */
+  font-size: 15px;
+  font-weight: 500;
+  box-shadow: 0 2px 8px rgba(44,53,63,0.08);
+}
+
+.nav-btn.active {
+  background: linear-gradient(90deg, #ff4b2b 0%, #ff416c 100%);
+  color: #fff;
+  box-shadow: 0 3px 12px rgba(255, 99, 71, 0.18);
+}
+
+/* Icon Styling */
+.btn-icon {
+  width: 20px;
+  height: auto;
+}
+
+/* Hover Effect */
+.nav-btn:hover {
+  transform: translateY(-3px);
+  color: #fff;
+  background: linear-gradient(90deg, #ff4b2b 0%, #ff416c 100%);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .nav-links {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+.nav.scrolled {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  /* background: #1a1a1a; */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  z-index: 1000;
+  color: #fff;
+  transition: top 0.3s ease-in-out;
+}
+  .nav-btn {
+    width: 100%;
+    justify-content: center;
+  }
+}
