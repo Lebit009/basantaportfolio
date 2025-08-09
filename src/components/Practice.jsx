@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { motion } from "framer-motion";
 import "../css/Practice.css";
 import powerbiImg from "../assets/img/student.png";
+import gamehub from "../assets/img/gamehub.png";
 
 const cardData = [
   {
@@ -13,10 +14,11 @@ const cardData = [
   },
   {
     id: 2,
-    title: "Student Analytics Portal",
-    content: "A modern analytics portal for students, featuring real-time data, charts, and actionable insights.",
-    image: powerbiImg,
-    link: "https://example.com/student-analytics"
+    title: "Mini Game HuB",
+    content: "7 games are present in the site with no backend.",
+    image: gamehub,
+    link: "https://minigamehubb.netlify.app/"
+
   }
 ];
 

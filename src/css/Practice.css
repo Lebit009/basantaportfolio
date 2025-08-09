@@ -1,44 +1,61 @@
+.section-title{
+     margin-bottom: 56px;
+  text-align: center;
+  font-weight: 700;
+  font-size: 2rem;
+  letter-spacing: 0.5px;
+  color: #223;
+}
 .cards-container {
   display: flex;
   justify-content: center;
-  align-items: center;
-  /* min-height: 60vh; */
-  
-  padding: 40px 0;
+  align-items: stretch; 
+  flex-wrap: wrap;       
+  gap: 24px;             
+  padding: 40px 20px;    
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
 .card {
   background: #fff;
   border-radius: 16px;
-  box-shadow: 0 4px 24px rgba(30,41,59,0.12);
+  box-shadow: 0 4px 24px rgba(30, 41, 59, 0.12);
   padding: 32px 24px;
+  flex: 1 1 320px;      
   max-width: 350px;
-  width: 100%;
   text-align: center;
   transition: transform 0.2s, box-shadow 0.2s;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .card:hover {
   transform: translateY(-8px) scale(1.03);
-  box-shadow: 0 8px 32px rgba(30,41,59,0.18);
+  box-shadow: 0 8px 32px rgba(30, 41, 59, 0.18);
 }
 
 .card img {
-  width: auto;
-  height: auto;
+  height: 140px;
+  width: 270px;
+  object-fit: cover;
   margin-bottom: 1rem;
+  flex-shrink: 0;
 }
 
 .card h3 {
   margin: 0.5rem 0 1rem 0;
   color: #1e293b;
   font-size: 1.3rem;
+  flex-shrink: 0;
 }
 
 .card p {
   color: #334155;
   font-size: 1rem;
   margin-bottom: 1.5rem;
+  flex-grow: 1;
 }
 
 .powerbi-link {
@@ -50,35 +67,13 @@
   text-decoration: none;
   font-weight: bold;
   transition: background 0.2s;
+  white-space: nowrap;
 }
 
 .powerbi-link:hover {
   background: #494949;
   color: #fff;
 }
-
-/* Responsive for small screens */
-@media (max-width: 800px) {
-  .card {
-    padding: 20px 8px;
-    max-width: 95vw;
-  }
-  /* .card img {
-    width: 80px;
-  } */
-  .cards-container{
-    flex-direction: column;
-    align-items: center;
-  }
-}
-
-.section-title {
- margin: auto;
-    /* background: rgb(10, 27, 73);  */
-    text-align: center;
-    color: #000000;
-}
-
 
 .youtube-section {
   display: flex;
